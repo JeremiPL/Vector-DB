@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Word to Vector (314)</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com" />
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+	<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
+	<link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+	<main class="page">
+		<section class="card">
+			<p class="eyebrow">Vector Demo</p>
+			<h1>Enter a word</h1>
+
+			<form id="embedForm" class="form">
+				<input id="textInput" type="text" placeholder="Try:" autocomplete="off" required />
+				<button type="submit">Embed</button>
+			</form>
+
+			<p id="status" class="status">Ready.</p>
+			<p id="dimension" class="dimension">Dimension: -</p>
+
+			<label for="vectorOutput" class="outputLabel">Vector output</label>
+			<textarea id="vectorOutput" readonly></textarea>
+
+			<section class="similaritySection">
+				<h2>Compare two texts</h2>
+				<form id="similarityForm" class="form similarityForm">
+					<input id="text1Input" type="text" placeholder="First text" autocomplete="off" required />
+					<input id="text2Input" type="text" placeholder="Second text" autocomplete="off" required />
+					<button type="submit">Check Similarity</button>
+				</form>
+				<p id="similarityStatus" class="status">Ready to compare.</p>
+				<p id="similarityResult" class="similarityResult">Similarity: -</p>
+			</section>
+		</section>
+	</main>
+
+	<script src="/script.js"></script>
+</body>
+</html>
